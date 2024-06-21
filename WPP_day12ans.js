@@ -8,6 +8,6 @@ function string_reverse(str)
     return newString;
 }
 
-const name= 'Sabyasachi Sahani';
-const nameReverse = string_reverse(name);
+const oldName= 'Sabyasachi Sahani';
+const nameReverse = string_reverse(oldName);
 console.log(nameReverse);
