@@ -1,10 +1,22 @@
-function reverseString(str) {
-    // Base case
-    if (str === "" || str.length === 1) {
-        return str;
+function swap(arr)
+{
+    if(arr.length==1)
+        return arr;
+    else if(arr.length>0)
+    {
+        arr[0] = arr[0]+ arr[arr.length-1];
+        arr[arr.length-1] = arr[0] - arr[arr.length-1];
+        arr[0] = arr[0] - arr[arr.length-1];
+        return arr;
+    } 
+    else {
+        console.log("Array is blank");
+        return -1;
     }
-    // Calling function recursively
-    return reverseString(str.substring(1)) + str[0];
+
 }
 
-console.log(reverseString("CrazyforGeeks"));
+console.log(swap([1,2,3,4]));
+console.log(swap([5,2,3,4,6,13,1]));
+console.log(swap([2]));
+console.log(swap([]));
